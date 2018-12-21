@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Karla);* {
+  font-size: 10px;
+  font-family: "Karla", sans-serif;
+}
+
+html {
+  padding: 30px;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 40vw 1fr;
+  margin-bottom: 30px;
+}
+
+nav > div:first-child {
+  text-align: center;
+}
+
+nav > div:last-child ul {
+  margin: 0;
+}
+
+nav > div:last-child ul li {
+  display: inline;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+nav > div:last-child ul li a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #1d1f2e;
+  opacity: 0.6;
+  transition: opacity 0.7s ease;
+  text-decoration: none;
+}
+
+nav > div:last-child ul li a:hover {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
