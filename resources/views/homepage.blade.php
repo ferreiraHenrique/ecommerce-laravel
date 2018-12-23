@@ -121,4 +121,61 @@
 		</div>
 	</div>
 </section>
+
+
+<section class="parallax">
+	
+</section>
+
+
+<section class="blog">
+	<div class="section-title">
+		<h2>BEHIND THE MUGS, LIFESTYLE STORIES</h2>
+	</div>
+
+	<div class="posts">
+		<div>
+			<div class="image">
+				<button>READ THE FULL STORY</button>
+			</div>
+			<h3>Health Check: why do I get a headache when I haven’t had my coffee?</h3>
+			<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			<span>OCTOBER 9, 2018</span>
+		</div>
+
+		<div>
+			<div class="image">
+				<button>READ THE FULL STORY</button>
+			</div>
+			<h3>Health Check: why do I get a headache when I haven’t had my coffee?</h3>
+			<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			<span>OCTOBER 9, 2018</span>
+		</div>
+
+		<div>
+			<div class="image">
+				<button>READ THE FULL STORY</button>
+			</div>
+			<h3>Health Check: why do I get a headache when I haven’t had my coffee?</h3>
+			<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+			<span>OCTOBER 9, 2018</span>
+		</div>
+	</div>
+</section>
+
+
+<section class="newsletter">
+	<div class="section-title">
+		<h2>SIGN UP AND GET FREE COFFEE BAGS</h2>
+	</div>
+
+	<div class="form">
+		<h3>Coffee Updates</h3>
+
+		<form>
+			<input type="text" placeholder="email@email.com">
+			<button type="button">SUBSCRIBE</button>
+		</form>
+	</div>
+</section>
 @endsection
