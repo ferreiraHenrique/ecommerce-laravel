@@ -31,9 +31,9 @@
 	<div class="products">
 		<ul class="image">
 			<li>
-				<button>EXPLORE MUG</button>
+				<button><a href="/product/teste">EXPLORE MUG</a></button>
 			</li>
-			<li><button>EXPLORE MUG</button></li>
+			<li><button><a href="/product/teste">EXPLORE MUG</a></button></li>
 		</ul>
 		<ul class="title">
 			<li>
@@ -55,11 +55,9 @@
 
 	<div class="products">
 		<ul class="image">
-			<li>
-				<button>EXPLORE MUG</button>
-			</li>
-			<li><button>EXPLORE MUG</button></li>
-			<li><button>EXPLORE MUG</button></li>
+			<li><button><a href="#">EXPLORE MUG</a></button></li>
+			<li><button><a href="#">EXPLORE MUG</a></button></li>
+			<li><button><a href="#">EXPLORE MUG</a></button></li>
 		</ul>
 		<ul class="title">
 			<li>
@@ -160,22 +158,6 @@
 			<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
 			<span>OCTOBER 9, 2018</span>
 		</div>
-	</div>
-</section>
-
-
-<section class="newsletter">
-	<div class="section-title">
-		<h2>SIGN UP AND GET FREE COFFEE BAGS</h2>
-	</div>
-
-	<div class="form">
-		<h3>Coffee Updates</h3>
-
-		<form>
-			<input type="text" placeholder="email@email.com">
-			<button type="button">SUBSCRIBE</button>
-		</form>
 	</div>
 </section>
 @endsection

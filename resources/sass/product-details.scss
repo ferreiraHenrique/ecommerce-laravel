@@ -1,0 +1,239 @@
+@import 'variables';
+
+.product-details {
+    display: grid;
+    grid-template-columns: 1fr 34% 34% 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 60px;
+    margin-top: 80px;
+
+    .image {
+        grid-column: 2;
+        grid-row: 1;
+        background: $black;
+    }
+
+    .header-details {
+        grid-column: 3;
+        grid-row: 1;
+        align-self: center;
+        padding: 60px 0;
+
+        h1 {
+            color: $black;
+            font-size: 3.8rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        h2 {
+            margin: 0 0 8px 0;
+            font-size: 3rem;
+            font-weight: 400;
+            color: $black;
+        }
+
+        p {
+            color: $black;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            opacity: .6;
+        }
+
+        .form-add-cart form {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            grid-template-rows: auto auto;
+            grid-gap: 10px;
+
+            label {
+                grid-column: 1 / -1;
+                grid-row: 1;
+                color: $black;
+                opacity: .6;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            input {
+                padding: 15px;
+                font-size: 1.4rem;
+                background: #fafafa;
+                border: 1px solid #e5e5e7;
+                transition: border .4s ease;
+
+                &:focus, &:hover {
+                    border: 1px solid $black;
+                    transition: border .4s ease;
+                    outline: none;
+                }
+            }
+
+            button {
+                background: $black;
+                color: #fff;
+                border: none;
+                padding: 15px 25px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .description {
+        grid-column: 2;
+        grid-row: 2;
+
+        h2 {
+            font-size: 1.2rem;
+			color: $black;
+			opacity: .6;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $black;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            opacity: .6;
+        }
+    }
+
+    .dimensions {
+        grid-column: 3;
+        grid-row: 2;
+
+        h2 {
+            font-size: 1.2rem;
+			color: $black;
+			opacity: .6;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            padding-left: 15px;
+
+            li {
+                font-size: 1.6rem;
+                padding: 4px 0;
+                color: $black;
+
+                span {
+                    font-size: 1.6rem;
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}
+
+.related {
+    display: grid;
+	grid-template-columns: 1fr 80% 1fr;
+	grid-template-rows: auto auto;
+	grid-row-gap: 40px;
+
+    margin-top: 80px;
+    
+    .section-title {
+		grid-column: 2;
+		grid-row: 1;
+		text-align: center;
+
+		h2 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $black;
+			opacity: .6;
+			letter-spacing: 3px;
+		}
+    }
+    
+    .products {
+        grid-column: 2;
+        grid-row: 2;
+
+        ul.image {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: 20px;
+
+			li {
+				list-style: none;
+				text-align: center;
+				height: 50vh;
+				background: $black;
+				display: grid;
+				align-items: end;
+				padding: 15px;
+
+				button {
+					padding: 18px;
+					background: #fff;
+					border: none;
+					opacity: 0;
+					margin-bottom: -30px;
+					transition: all .4s ease;
+
+					a {
+						text-decoration: none;
+						font-size: 1.4rem;
+						letter-spacing: 3px;
+						color: $black;
+					}
+				}
+
+				&:hover button {
+					opacity: 1;
+					margin-bottom: 0;
+					transition: all .4s ease;
+				}
+			}
+		}
+
+		ul.title {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: 20px;
+
+			li {
+				list-style: none;
+				padding: 20px;
+				color: $black;
+				text-align: center;
+
+				h3 {
+					font-size: 2rem;
+					font-weight: 400;
+					margin-bottom: 0;
+				}
+
+				p {
+					font-size: 1.6rem;
+					opacity: .6;
+					margin-top: 8px;
+
+					&.off {
+						color: $gold;
+						font-weight: 500;
+						font-size: 2rem;
+						opacity: 1;
+					}
+
+					i {
+						text-decoration: line-through;
+						font-size: 1.5rem;
+						opacity: .6;
+						font-style: normal;
+						color: $black;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+    }
+}

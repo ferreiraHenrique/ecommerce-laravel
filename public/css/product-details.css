@@ -1,0 +1,238 @@
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 34% 34% 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 60px;
+  margin-top: 80px;
+}
+
+.product-details .image {
+  grid-column: 2;
+  grid-row: 1;
+  background: #1d1f2e;
+}
+
+.product-details .header-details {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  padding: 60px 0;
+}
+
+.product-details .header-details h1 {
+  color: #1d1f2e;
+  font-size: 3.8rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.product-details .header-details h2 {
+  margin: 0 0 8px 0;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #1d1f2e;
+}
+
+.product-details .header-details p {
+  color: #1d1f2e;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  opacity: 0.6;
+}
+
+.product-details .header-details .form-add-cart form {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+
+.product-details .header-details .form-add-cart form label {
+  grid-column: 1/-1;
+  grid-row: 1;
+  color: #1d1f2e;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.product-details .header-details .form-add-cart form input {
+  padding: 15px;
+  font-size: 1.4rem;
+  background: #fafafa;
+  border: 1px solid #e5e5e7;
+  transition: border 0.4s ease;
+}
+
+.product-details .header-details .form-add-cart form input:focus,
+.product-details .header-details .form-add-cart form input:hover {
+  border: 1px solid #1d1f2e;
+  transition: border 0.4s ease;
+  outline: none;
+}
+
+.product-details .header-details .form-add-cart form button {
+  background: #1d1f2e;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.4rem;
+}
+
+.product-details .description {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.product-details .description h2 {
+  font-size: 1.2rem;
+  color: #1d1f2e;
+  opacity: 0.6;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.product-details .description p {
+  color: #1d1f2e;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  opacity: 0.6;
+}
+
+.product-details .dimensions {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.product-details .dimensions h2 {
+  font-size: 1.2rem;
+  color: #1d1f2e;
+  opacity: 0.6;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.product-details .dimensions ul {
+  padding-left: 15px;
+}
+
+.product-details .dimensions ul li {
+  font-size: 1.6rem;
+  padding: 4px 0;
+  color: #1d1f2e;
+}
+
+.product-details .dimensions ul li span {
+  font-size: 1.6rem;
+  opacity: 0.6;
+}
+
+.related {
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 40px;
+  margin-top: 80px;
+}
+
+.related .section-title {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+.related .section-title h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1d1f2e;
+  opacity: 0.6;
+  letter-spacing: 3px;
+}
+
+.related .products {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.related .products ul.image {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.related .products ul.image li {
+  list-style: none;
+  text-align: center;
+  height: 50vh;
+  background: #1d1f2e;
+  display: grid;
+  align-items: end;
+  padding: 15px;
+}
+
+.related .products ul.image li button {
+  padding: 18px;
+  background: #fff;
+  border: none;
+  opacity: 0;
+  margin-bottom: -30px;
+  transition: all 0.4s ease;
+}
+
+.related .products ul.image li button a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: #1d1f2e;
+}
+
+.related .products ul.image li:hover button {
+  opacity: 1;
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+}
+
+.related .products ul.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+}
+
+.related .products ul.title li {
+  list-style: none;
+  padding: 20px;
+  color: #1d1f2e;
+  text-align: center;
+}
+
+.related .products ul.title li h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.related .products ul.title li p {
+  font-size: 1.6rem;
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+.related .products ul.title li p.off {
+  color: #a25f4b;
+  font-weight: 500;
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.related .products ul.title li p i {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  font-style: normal;
+  color: #1d1f2e;
+  font-weight: 400;
+}
+

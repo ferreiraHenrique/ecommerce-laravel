@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="/">Home</a></li>
 				<li><a href="#">our products</a></li>
 				<li><a href="#">blog</a></li>
 				<li><a href="#">about</a></li>
@@ -25,6 +25,21 @@
 	</nav>
 
 	@yield('content')
+
+	<section class="newsletter">
+		<div class="section-title">
+			<h2>SIGN UP AND GET FREE COFFEE BAGS</h2>
+		</div>
+
+		<div class="form">
+			<h3>Coffee Updates</h3>
+
+			<form>
+				<input type="text" placeholder="email@email.com">
+				<button type="button">SUBSCRIBE</button>
+			</form>
+		</div>
+	</section>
 
 	<footer>
 		<div>
