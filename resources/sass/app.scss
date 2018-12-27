@@ -234,3 +234,154 @@ footer {
 		}
 	}
 }
+
+.side-cart {
+	display: grid;
+	grid-template-columns: 65vw 35vw;
+	position: fixed;
+	top: 0;
+	z-index: 666;
+
+	&.active {
+		right: 0;
+		opacity: 1;
+		transition: all .4s ease;
+	}
+
+	&:not(.active){
+		right: -100vw;
+		opacity: 0;
+		transition: all .4s ease;
+
+		// > div:first-child {
+		// 	opacity: 0;
+		// 	transition: opacity .7s ease;
+		// }
+
+		// > div:last-child {
+		// 	opacity: 0;
+		// 	transition: all .7s ease;
+		// }
+	}
+
+	> div:first-child {
+		background: $black;
+		opacity: .4;
+		transition: opacity .7s ease;
+	}
+
+	> div:last-child {
+		height: 100vh;
+		background: $black;
+
+		.title {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			color: #fff;
+			padding: 30px 40px;
+			border-bottom: 1px solid hsla(240, 3%, 83%, .1);
+			
+			p {
+				margin: 0;
+				font-size: 1.2rem;
+				opacity: .6;
+				letter-spacing: 2px;
+			}
+
+			i {
+				font-size: 2rem;
+				justify-self: end;
+				opacity: .6;
+				cursor: pointer;
+			}
+		}
+
+		#cart {
+			.empty-cart {
+				display: grid;
+				height: 100vh;
+
+				align-items: center;
+				color: #fff;
+				text-align: center;
+
+				div {
+					padding: 0 40px;
+				}
+
+				h2 {
+					font-size: 2rem;
+					font-weight: 400;
+					margin-top: 0;
+				}
+
+				p {
+					font-size: 1.4rem;
+					opacity: .6;
+				}
+			}
+
+			> div:not(.empty-cart) {
+				padding: 30px 30px;
+
+				.item {
+					display: grid;
+					grid-template-columns: 80px 1fr 1fr 60px;
+					grid-template-rows: auto auto auto;
+					grid-gap: 8px 10px;
+
+					* { margin: 0 }
+
+					.image {
+						grid-column: 1;
+						grid-row: 1 / span 3;
+						background: #fff;
+					}
+
+					.name {
+						grid-column: 2 / span 2;
+						font-size: 1.8rem;
+						color: #fff;
+					}
+
+					.price {
+						grid-column: 2 / span 2;
+						grid-row: 2;
+						font-size: 1.6rem;
+						color: #fff;
+					}
+
+					a {
+						grid-column: 2 / span 2;
+						grid-row: 3;
+						text-decoration: none;
+						color: #fff;
+						opacity: .6;
+						font-size: 1.2rem;
+						letter-spacing: 2px;
+					}
+
+					input {
+						grid-column: 4;
+						grid-row: 1 / span 3;
+						align-self: center;
+						font-size: 1.6rem;
+						height: 30px;
+						padding: 5px;
+						text-align: center;
+						background: $black;
+						border: 1px solid rgba(210,210,213,.1);
+						color: #fff;
+						transition: border .4s ease;
+						
+						&:hover, &:focus {
+							border: 1px solid rgba(255,255,255,.5);
+							transition: border .4s ease;
+							outline: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

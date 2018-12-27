@@ -18,8 +18,10 @@
         <div class="form-add-cart">
             <form>
                 <label>Quantity</label>
-                <input type="number" value="1" />
-                <button type="button">ADD TO CART</button>
+                <input type="number" value="1" id="quantity" />
+                <input type="hidden" value="99.00" id="price" />
+                <input type="hidden" value="Pink Premium Ceramic" id="name" />
+                <button type="button" class="add-cart">ADD TO CART</button>
             </form>
         </div>
     </div>

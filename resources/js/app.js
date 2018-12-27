@@ -20,7 +20,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,6 +28,48 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+// const cart = new Vue({
+//     el: '#cart',
+//     data: {
+//         tem_carrinho: false,
+//     }
+// });
+
+const side_cart = new Vue({
+    el: '#side-cart',
+    data: {
+        isActive: true,
+        items: []
+    }
+});
+
+document.querySelector('#open-cart').addEventListener('click', (event) => {
+    event.preventDefault();
+    side_cart.$data.isActive = true;
+});
+
+document.querySelector('.dismiss-cart').addEventListener('click', () => {
+    side_cart.$data.isActive = false;
+});
+
+document.querySelector('.add-cart').addEventListener('click', (event) => {
+    event.target.innerText = 'ADDING TO CART...';
+    let quantity = event.target.parentElement.querySelector('#quantity').value;
+    let price = event.target.parentElement.querySelector('#price').value;
+    let name = event.target.parentElement.querySelector('#name').value;
+
+    const product = {
+        name: name,
+        price: parseFloat(price),
+        quantity: parseInt(quantity),
+    };
+
+    side_cart.$data.items.push(product);
+
+    side_cart.$data.isActive = true;
+    event.target.innerText = 'ADD TO CART';
 });

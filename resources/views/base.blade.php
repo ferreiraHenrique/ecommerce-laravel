@@ -19,7 +19,7 @@
 				<li><a href="#">blog</a></li>
 				<li><a href="#">about</a></li>
 				<li><a href="#">contact</a></li>
-				<li><a href="#">cart</a></li>
+				<li><a href="#" id="open-cart">cart</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -84,5 +84,35 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="side-cart" v-bind:class="{ active: isActive }" id="side-cart">
+		<div class="dismiss-cart"></div>
+		<div>
+			<div class="title">
+				<p>YOUR CART</p>
+				<!-- <i class="dismiss-cart">&times;</i> -->
+			</div>
+
+			<div id="cart">
+				<div v-if="items.length">
+					<div class="item" v-for="item in items">
+						<div class="image"></div>
+						<p class="name">@{{ item.name }}</p>
+						<p class="price">$@{{ item.price }}</p>
+						<input type="text" v-bind:value="item.quantity" maxlength="1" />
+						<a href="#">REMOVE</a>
+					</div>
+				</div>
+				<div v-else class="empty-cart">
+					<div>
+						<h2>Your Cart is Empty</h2>
+						<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
