@@ -100,7 +100,7 @@
 						<p class="name">@{{ item.name }}</p>
 						<p class="price">$@{{ item.price }}</p>
 						<input type="text" v-bind:value="item.quantity" maxlength="1" />
-						<a href="#">REMOVE</a>
+						<a href="#" v-bind:data-uid="item.uid">REMOVE</a>
 					</div>
 				</div>
 				<div v-else class="empty-cart">

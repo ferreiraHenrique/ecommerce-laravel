@@ -21,6 +21,7 @@
                 <input type="number" value="1" id="quantity" />
                 <input type="hidden" value="99.00" id="price" />
                 <input type="hidden" value="Pink Premium Ceramic" id="name" />
+                <input type="hidden" value="1" id="uid" />
                 <button type="button" class="add-cart">ADD TO CART</button>
             </form>
         </div>

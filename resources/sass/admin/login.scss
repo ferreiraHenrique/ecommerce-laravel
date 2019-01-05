@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import '../variables';
+
+* { 
+	font-size: 10px;
+	font-family: 'Karla', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    background-color: $black;
+
+    > div {
+        grid-column: 2;
+        background-color: #fff;
+        height: 100vh;
+        padding-left: 10vw;
+        
+        display: grid;
+        align-items: center;
+
+        h1 {
+            color: #1d1f2e;
+            font-size: 3.8rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        form {
+            > div {
+                display: grid;
+                grid-template-columns: 50% 50%; 
+                grid-template-rows: auto auto;
+                margin-bottom: 15px;
+
+                label {
+                    grid-column: 1;
+                    grid-row: 1;
+                    color: $black;
+                    opacity: .6;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+
+                input {
+                    grid-column: 1;
+                    grid-row: 2;
+                    padding: 15px;
+                    font-size: 1.4rem;
+                    background: #fafafa;
+                    border: 1px solid #e5e5e7;
+                    transition: border .4s ease;
+
+                    &:focus, &:hover {
+                        border: 1px solid $black;
+                        transition: border .4s ease;
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                background: $black;
+                color: #fff;
+                border: none;
+                padding: 15px 25px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

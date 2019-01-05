@@ -47480,7 +47480,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 var side_cart = new Vue({
   el: '#side-cart',
   data: {
-    isActive: true,
+    isActive: false,
     items: []
   }
 });
@@ -47496,7 +47496,9 @@ document.querySelector('.add-cart').addEventListener('click', function (event) {
   var quantity = event.target.parentElement.querySelector('#quantity').value;
   var price = event.target.parentElement.querySelector('#price').value;
   var name = event.target.parentElement.querySelector('#name').value;
+  var uid = event.target.parentElement.querySelector('#uid').value;
   var product = {
+    uid: uid,
     name: name,
     price: parseFloat(price),
     quantity: parseInt(quantity)
@@ -47504,6 +47506,19 @@ document.querySelector('.add-cart').addEventListener('click', function (event) {
   side_cart.$data.items.push(product);
   side_cart.$data.isActive = true;
   event.target.innerText = 'ADD TO CART';
+  setTimeout(function () {
+    document.querySelectorAll('#cart .item a').forEach(function (el) {
+      el.addEventListener('click', function (event) {
+        event.preventDefault();
+        var uid = event.target.getAttribute('data-uid');
+        var temp = [];
+        side_cart.$data.items.forEach(function (el) {
+          if (el.uid != uid) temp.push(el);
+        });
+        side_cart.$data.items = temp;
+      });
+    });
+  }, 1000);
 });
 
 /***/ }),
@@ -47566,6 +47581,17 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/sass/admin/login.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/admin/login.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -47600,16 +47626,17 @@ if (token) {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/product-details.scss ./resources/sass/app.scss ***!
-  \******************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/product-details.scss ./resources/sass/app.scss ./resources/sass/admin/login.scss ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/home.scss */"./resources/sass/home.scss");
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/product-details.scss */"./resources/sass/product-details.scss");
-module.exports = __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/login.scss */"./resources/sass/admin/login.scss");
 
 
 /***/ })

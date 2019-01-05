@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function(){
+    // allProducts
     return view('homepage');
 });
 
 Route::get('/product/{slug}', function(){
     return view('product.details');
+});
+
+Route::name('admin.')->group(function(){
+    Route::prefix('admin')->group(function(){
+        Route::get('login', function(){ return view('admin.login'); });
+    });
 });

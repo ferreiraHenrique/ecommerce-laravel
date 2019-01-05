@@ -42,7 +42,7 @@ window.Vue = require('vue');
 const side_cart = new Vue({
     el: '#side-cart',
     data: {
-        isActive: true,
+        isActive: false,
         items: []
     }
 });
@@ -61,8 +61,10 @@ document.querySelector('.add-cart').addEventListener('click', (event) => {
     let quantity = event.target.parentElement.querySelector('#quantity').value;
     let price = event.target.parentElement.querySelector('#price').value;
     let name = event.target.parentElement.querySelector('#name').value;
+    let uid = event.target.parentElement.querySelector('#uid').value;
 
     const product = {
+        uid: uid,
         name: name,
         price: parseFloat(price),
         quantity: parseInt(quantity),
@@ -72,4 +74,22 @@ document.querySelector('.add-cart').addEventListener('click', (event) => {
 
     side_cart.$data.isActive = true;
     event.target.innerText = 'ADD TO CART';
+
+    setTimeout(() => {
+        document.querySelectorAll('#cart .item a')
+            .forEach(el => {
+                el.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    
+                    let uid = event.target.getAttribute('data-uid');
+                    let temp = [];
+                    side_cart.$data.items.forEach(el => {
+                        if(el.uid != uid)
+                            temp.push(el);
+                    });
+
+                    side_cart.$data.items = temp;
+                });
+            });
+    }, 1000);
 });
