@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import '../variables';
+
+* { 
+	font-size: 10px;
+	font-family: 'Karla', sans-serif;
+}
+
+
+.overview {
+    > div {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+
+        > div {
+            background-color: rgba(29,31,46,.04);
+            padding: 15px 25px;
+
+            border-right: 1.5px solid rgba(29,31,46,.1);
+            &:nth-child(4n){
+                border-right: none;
+            }
+
+            h3 {
+                color: $black;
+                font-size: 1.4rem;
+                font-weight: 400;
+                margin-bottom: 40px;
+            }
+
+            p {
+                color: $black;
+                font-size: 2rem;
+            }
+        }
+    }
+}

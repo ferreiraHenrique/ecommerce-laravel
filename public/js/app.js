@@ -47581,10 +47581,43 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/sass/admin/app.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/admin/app.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/admin/dashboard.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/admin/dashboard.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/admin/login.scss":
 /*!*****************************************!*\
   !*** ./resources/sass/admin/login.scss ***!
   \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/admin/product.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/admin/product.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -47626,9 +47659,9 @@ if (token) {
 /***/ }),
 
 /***/ 0:
-/*!****************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/product-details.scss ./resources/sass/app.scss ./resources/sass/admin/login.scss ***!
-  \****************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/home.scss ./resources/sass/product-details.scss ./resources/sass/app.scss ./resources/sass/admin/login.scss ./resources/sass/admin/dashboard.scss ./resources/sass/admin/product.scss ./resources/sass/admin/app.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -47636,7 +47669,10 @@ __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/js/app.j
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/home.scss */"./resources/sass/home.scss");
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/product-details.scss */"./resources/sass/product-details.scss");
 __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/login.scss */"./resources/sass/admin/login.scss");
+__webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/login.scss */"./resources/sass/admin/login.scss");
+__webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/dashboard.scss */"./resources/sass/admin/dashboard.scss");
+__webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/product.scss */"./resources/sass/admin/product.scss");
+module.exports = __webpack_require__(/*! /home/henrique/projects/php/ecommerce/resources/sass/admin/app.scss */"./resources/sass/admin/app.scss");
 
 
 /***/ })

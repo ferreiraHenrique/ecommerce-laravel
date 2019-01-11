@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+@import '../variables';
+
+* { 
+	font-size: 10px;
+	font-family: 'Karla', sans-serif;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    a, a:visited, a:hover, a:focus {
+        color: $black;
+        opacity: .9;
+        outline-color: none;
+    }
+    
+    > .actions {
+        padding: 0 30px 0 15px;
+        i { font-size: 1.4rem; }
+    }
+
+    > .list {
+        grid-column: 1 / span 2;
+
+        > div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) auto;
+
+            padding: 20px 25px;
+
+            &:hover, &:nth-child(odd) {
+                background: rgba(29, 31, 46, 0.04);
+            }
+
+            p {
+                color: $black;
+                font-size: 1.6rem;
+                line-height: 3rem;
+                opacity: .6;
+                margin: 0;
+            }
+
+            .actions {
+                grid-column: -1;
+                padding-right: 6px;
+
+                a { padding-left: 10px; }
+                i { font-size: 1.4rem; }
+            }
+        }
+    }
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+
+    padding: 20px 25px;
+
+    > div {
+        display: grid;
+        grid-template-rows: auto auto;
+
+        margin-bottom: 20px;
+
+        &.name, &.description, &.details { grid-column: 1 / span 2; }
+
+        label {
+            color: $black;
+            opacity: .6;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 7px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            font-size: 1.4rem;
+            background: #fafafa;
+            border: 1px solid #e5e5e7;
+            transition: border .4s ease;
+
+            &:focus, &:hover {
+                border: 1px solid $black;
+                transition: border .4s ease;
+                outline: none;
+            }
+        }
+    }
+
+    h3 {
+        grid-column: 1 / span 2;
+
+        color: #1d1f2e;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+
+    button {
+        background: $black;
+        color: #fff;
+        border: none;
+        padding: 15px 25px;
+        font-size: 1.4rem;
+        margin-top: 40px;
+        grid-column: 2;
+        cursor: pointer;
+        transition: opacity .4s ease;
+
+        &:hover {
+            opacity: .94;
+            transition: opacity .4s ease;
+        }
+    }
+}

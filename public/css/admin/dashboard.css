@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Karla);* {
+  font-size: 10px;
+  font-family: "Karla", sans-serif;
+}
+
+.overview > div {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.overview > div > div {
+  background-color: rgba(29, 31, 46, 0.04);
+  padding: 15px 25px;
+  border-right: 1.5px solid rgba(29, 31, 46, 0.1);
+}
+
+.overview > div > div:nth-child(4n) {
+  border-right: none;
+}
+
+.overview > div > div h3 {
+  color: #1d1f2e;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.overview > div > div p {
+  color: #1d1f2e;
+  font-size: 2rem;
+}
+

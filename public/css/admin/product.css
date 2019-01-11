@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Karla);* {
+  font-size: 10px;
+  font-family: "Karla", sans-serif;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.products a,
+.products a:visited,
+.products a:hover,
+.products a:focus {
+  color: #1d1f2e;
+  opacity: 0.9;
+  outline-color: none;
+}
+
+.products > .actions {
+  padding: 0 30px 0 15px;
+}
+
+.products > .actions i {
+  font-size: 1.4rem;
+}
+
+.products > .list {
+  grid-column: 1/span 2;
+}
+
+.products > .list > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  padding: 20px 25px;
+}
+
+.products > .list > div:hover,
+.products > .list > div:nth-child(odd) {
+  background: rgba(29, 31, 46, 0.04);
+}
+
+.products > .list > div p {
+  color: #1d1f2e;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.products > .list > div .actions {
+  grid-column: -1;
+  padding-right: 6px;
+}
+
+.products > .list > div .actions a {
+  padding-left: 10px;
+}
+
+.products > .list > div .actions i {
+  font-size: 1.4rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 20px 25px;
+}
+
+form > div {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-bottom: 20px;
+}
+
+form > div.name,
+form > div.description,
+form > div.details {
+  grid-column: 1/span 2;
+}
+
+form > div label {
+  color: #1d1f2e;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+form > div input,
+form > div textarea {
+  padding: 15px;
+  font-size: 1.4rem;
+  background: #fafafa;
+  border: 1px solid #e5e5e7;
+  transition: border 0.4s ease;
+}
+
+form > div input:focus,
+form > div input:hover,
+form > div textarea:focus,
+form > div textarea:hover {
+  border: 1px solid #1d1f2e;
+  transition: border 0.4s ease;
+  outline: none;
+}
+
+form h3 {
+  grid-column: 1/span 2;
+  color: #1d1f2e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+form button {
+  background: #1d1f2e;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.4rem;
+  margin-top: 40px;
+  grid-column: 2;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+form button:hover {
+  opacity: 0.94;
+  transition: opacity 0.4s ease;
+}
+
