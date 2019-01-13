@@ -19,7 +19,7 @@
             <p>${{$product->format_price()}}</p>
 
             <div class="actions">
-                <a href="{{ route('admin.product.new') }}"><i class="fas fa-edit"></i></a>
+                <a href="{{ route('admin.product.edit', $product->id) }}"><i class="fas fa-edit"></i></a>
                 <a href="{{ route('admin.product.delete', $product->id) }}"><i class="far fa-trash-alt"></i></a>
             </div>
         </div>

@@ -29,6 +29,8 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::prefix('product')->name('product.')->group(function(){
         Route::get('new', function(){ return view('admin.product.form'); })->name('new');
         Route::post('new', 'Admin\ProductController@create')->name('create');
+        Route::get('edit/{id}', 'Admin\ProductController@edit')->name('edit');
+        Route::post('edit/{id}', 'Admin\ProductController@update')->name('update');
         Route::get('delete/{id}', 'Admin\ProductController@delete')->name('delete');
     });
 });
